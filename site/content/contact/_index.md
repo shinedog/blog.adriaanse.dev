@@ -1,6 +1,6 @@
 ---
 title: Contact
-logo: /img/logo.svg
+logo: img/adriaanse-.dev-800x600.png
 contact_entries: []
 ---
 

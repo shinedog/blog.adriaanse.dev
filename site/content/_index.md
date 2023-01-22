@@ -1,7 +1,7 @@
 ---
 title: Welcome to My Simple Blog for Development
 subtitle: A Blog for Learning and Reflecting
-image: /img/home-jumbotron.jpg
+image: img/nasa-q1p7bh3shj8-unsplash.jpg
 blurb:
   heading: Why a blog?
   text: Everybody should have a space where they can work through things and

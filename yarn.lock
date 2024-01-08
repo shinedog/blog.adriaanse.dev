@@ -5614,9 +5614,9 @@ https-proxy-agent@5.0.1, https-proxy-agent@^5.0.0:
     debug "4"
 
 hugo-bin@^0.118.0:
-  version "0.118.0"
-  resolved "https://registry.yarnpkg.com/hugo-bin/-/hugo-bin-0.118.0.tgz#2d6b6d2e79e24ca3a786f50504efae354f993b5d"
-  integrity sha512-YVmmJIhoN9wJtHOR+FfVP2OFDymJF1Nop2MKSFmIKqOSu9B7ZfAn+yVCwernWNelepacjSYSoAebt+vFSsF5+g==
+  version "0.118.1"
+  resolved "https://registry.yarnpkg.com/hugo-bin/-/hugo-bin-0.118.1.tgz#0b6365d0e60644118a86f35240490db2351d8cab"
+  integrity sha512-WIS4kLNySb5u2+iwk//N7ClLUCksmyjvqdkGQTFc5v7Bqjpn1yLcIIBWwxU3R4SBc2Lr772/auxlzzsRffGbVA==
   dependencies:
     "@xhmikosr/bin-wrapper" "^12.0.0"
     pkg-conf "^4.0.0"
@@ -10513,9 +10513,9 @@ streaming-json-stringify@3:
     readable-stream "2"
 
 streamx@^2.15.0:
-  version "2.15.4"
-  resolved "https://registry.yarnpkg.com/streamx/-/streamx-2.15.4.tgz#497b8102d076ae12b43c456e0bb16940d1ba0999"
-  integrity sha512-uSXKl88bibiUCQ1eMpItRljCzDENcDx18rsfDmV79r0e/ThfrAwxG4Y2FarQZ2G4/21xcOKmFFd1Hue+ZIDwHw==
+  version "2.15.6"
+  resolved "https://registry.yarnpkg.com/streamx/-/streamx-2.15.6.tgz#28bf36997ebc7bf6c08f9eba958735231b833887"
+  integrity sha512-q+vQL4AAz+FdfT137VF69Cc/APqUbxy+MDOImRrMvchJpigHj9GksgDU2LYbO9rx7RX6osWgxJB2WxhYv4SZAw==
   dependencies:
     fast-fifo "^1.1.0"
     queue-tick "^1.0.1"

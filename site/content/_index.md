@@ -1,34 +1,93 @@
 ---
-title: Welcome to My Simple Blog for Development
-subtitle: A Blog for Learning and Reflecting
+title: Managed IT, Without Lock-In
+subtitle: Open, Recoverable, Accountable IT for Small Teams
 image: img/nasa-q1p7bh3shj8-unsplash.jpg
 blurb:
   heading: Why a blog?
-  text: Everybody should have a space where they can work through things and
-    develop their understanding. I've been trying to do that for the last, I
-    guess 37 odd years, now its time for me to put it out in public.
+  text: >-
+    We provide managed IT operations for small organisations that need their
+    systems to work, stay secure, and be recoverable—without proprietary
+    appliances, opaque SaaS stacks, or vendor lock-in.
+
+
+    We use open standards, open-source software, and commodity hardware to deliver reliable IT with a single accountable operator.
 intro:
-  heading: What we offer
-  text: Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone.
-products:
-  - image: img/illustrations-coffee.svg
-    text: We sell green and roasted coffee beans that are sourced directly from
-      independent farmers and farm cooperatives. We’re proud to offer a variety
-      of coffee beans grown with great care for the environment and local
-      communities. Check our post or contact us directly for current
-      availability.
-  - image: /img/illustrations-coffee-gear.svg
-    text: We offer a small, but carefully curated selection of brewing gear and
-      tools for every taste and experience level. No matter if you roast your
-      own beans or just bought your first french press, you’ll find a gadget to
-      fall in love with in our shop.
+  heading: The Problem We Solve
+  text: |-
+    Most small organisations:
+    Don’t trust their backups
+    Patch inconsistently (or not at all)
+    Have no real monitoring
+    Don’t know who owns failures
+    Are one incident away from downtime or data loss
+    They don’t need “digital transformation.”
+    They need IT that doesn’t surprise them.
+products: []
 values:
-  heading: Our values
-  text: Coffee is an amazing part of human culture but it has a dark side too –
-    one of colonialism and mindless abuse of natural resources and human lives.
-    We want to turn this around and return the coffee trade to the drink’s
-    exhilarating, empowering and unifying nature.
+  heading: Our MVP Service (What You Get)
+  text: >-
+    A complete baseline of operational IT hygiene, delivered as a monthly
+    service.
+
+    Included
+
+    Proactive monitoring of servers and systems
+
+    Daily backups with regular restore testing
+
+    Predictable patching and updates
+
+    Baseline security hardening
+
+    Enforced admin MFA
+
+    Business-hours remote support
+
+    Clear ownership when something breaks
+
+    What This Means in Practice
+
+    You know when things are failing before users do
+
+    You can recover data when—not if—something goes wrong
+
+    You know who is responsible
+
+    What We Deliberately Do Not Do
+
+    To keep quality high and costs predictable, we do not include:
+
+    Custom software development
+
+    Line-of-business application ownership
+
+    24/7 on-call response (available as an add-on later)
+
+    Proprietary hardware or black-box appliances
+
+    One-off “hero” fixes without fixing root causes
+
+    This is managed operations, not ad-hoc IT support.
+
+    How We’re Different
+
+    No vendor lock-in – you own your data and hardware
+
+    Open architecture – documented, auditable systems
+
+    Recovery-first design – backups and restores are real, not theoretical
+
+    One accountable operator – no ticket ping-pong
+
+    We optimise for operational sanity, not tool sprawl.
+
+    Who This Is For
+
+    10–50 person organisations
+
+    No internal IT team (or an overstretched one)
+
+    Businesses that value reliability over novelty
+
+    Teams that want fewer surprises, not more dashboards
 ---

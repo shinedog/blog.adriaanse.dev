@@ -28,7 +28,7 @@ The Hugo binary is bundled in `bin/` — it does not need to be installed separa
 
 ## Architecture
 
-This is a **Victor Hugo** stack: Hugo (static site generator) + Webpack (asset pipeline), deployed to Netlify with Netlify CMS for content editing.
+This is a **Victor Hugo** stack: Hugo (static site generator) + Webpack (asset pipeline), deployed to Netlify with Decap CMS for content editing.
 
 ### Two build systems that must stay in sync
 
@@ -39,7 +39,7 @@ This is a **Victor Hugo** stack: Hugo (static site generator) + Webpack (asset p
 ### Two JS entry points
 
 - `src/index.js` → main site bundle (imports `src/css/main.scss`, runs Netlify Identity redirect logic via `src/js/app.js`)
-- `src/js/cms.js` → Netlify CMS admin bundle (React-based, registers preview templates for each content collection, injects compiled site CSS into the CMS preview pane)
+- `src/js/cms.js` → Decap CMS admin bundle (`decap-cms-app`, React 19, functional components); registers preview templates for each content collection, injects compiled site CSS into the CMS preview pane via `to-string-loader`
 
 ### Hugo layout conventions
 
@@ -54,13 +54,25 @@ Custom fork of Tachyons (utility-first). Main entry: `src/css/main.scss`, which 
 
 ### Content and CMS
 
-Content is Markdown with YAML front matter in `site/content/`. The Netlify CMS schema (`site/static/admin/config.yml`) defines which fields each collection exposes — changes to front matter fields must be reflected in both the CMS config and the Hugo templates that read them.
+Content is Markdown with YAML front matter in `site/content/`. The Decap CMS schema (`site/static/admin/config.yml`) defines which fields each collection exposes — changes to front matter fields must be reflected in both the CMS config and the Hugo templates that read them.
 
-CMS preview templates in `src/js/cms-preview-templates/` are React components that mirror the Hugo layouts, so editors see an accurate live preview.
+CMS preview templates in `src/js/cms-preview-templates/` are functional React components. They receive `entry` (an Immutable.js Map — use `.getIn()` to read fields), `widgetFor`, and `getAsset` as props. Do not import `immutable` directly; use `.getIn()` and `.toJS()` on the values returned from `entry`.
+
+### Blog posts
+
+Posts live in `site/content/post/` as Markdown with YAML front matter. Required fields: `title`, `date`, `description`. Use `draft: true` to keep a post out of the public build.
+
+The blog is focused on **Nix, NixOS, and DevSecOps** for small-team managed IT. Tone is direct and practical — show real configuration, acknowledge real tradeoffs, avoid vendor marketing language.
+
+When adding a new post:
+- Filename should be kebab-case matching the title
+- Date format: `2026-04-29T09:00:00.000Z`
+- Keep `draft: true` until the post is ready to publish
+- The published blog list is paginated by 4; the Cypress test checks `have.length.at.least(1)` on `/post`
 
 ### Testing
 
-Cypress e2e tests in `cypress/e2e/basic.cy.js` run against `http://localhost:3000`. Tests assert page navigation and that exactly 3 blog posts exist by default. The `netlify-plugin-cypress` plugin runs these tests automatically during Netlify builds.
+Cypress e2e tests in `cypress/e2e/basic.cy.js` run against `http://localhost:3000`. Tests assert page navigation and that at least one blog post exists. The `netlify-plugin-cypress` plugin runs these tests automatically during Netlify builds.
 
 ## Key conventions
 
@@ -68,3 +80,4 @@ Cypress e2e tests in `cypress/e2e/basic.cy.js` run against `http://localhost:300
 - `no-console` is a warning (not error), so `console.log` is tolerated but flagged
 - Production builds are triggered by `yarn build` (webpack first, Hugo second); order matters because Hugo needs the webpack manifest
 - Draft and future-dated posts are excluded from `yarn build` but included in `yarn build:preview`
+- CMS admin panel uses `decap-cms-app` (the maintained successor to `netlify-cms-app`) with React 19

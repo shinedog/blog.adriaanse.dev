@@ -1,6 +1,8 @@
 [build.environment]
   NETLIFY_USE_YARN = "true"
   YARN_VERSION = "1.22.17"
+  # Node 18: satisfies nanoid@5 (^18||>=20) AND @netlify/plugin-lighthouse@4 (<20)
+  NODE_VERSION = "18"
 
 [build]
   command = "yarn build"
